@@ -1,4 +1,5 @@
 #Maintainer Erik Inkinen <erik.inkinen@gmail.com>
+
 pkgname=pulseaudio-modules-droid
 provides=('pulseaduio-modules-droid')
 _pkgbase=pulseaudio-modules-droid
@@ -8,8 +9,8 @@ arch=('armv7h' 'aarch64' 'x86' 'x86_64')
 url="https://github.com/mer-hybris/pulseaudio-modules-droid"
 license=('GPL2')
 depends=('pulseaudio-module-keepalive' 'pulseaudio' 'libevdev')
-makedepends=('git' 'pkgconfig' 'android-headers' 'automake' 'autoconf' 'libhybris' 'pulsecore-headers')
-source=("pulseaudio-modules-droid::git+https://github.com/droidian/pulseaudio-modules-droid.git")
+makedepends=('git' 'pkgconfig' 'android-headers-30' 'automake' 'autoconf' 'libhybris' 'pulsecore-headers')
+source=("pulseaudio-modules-droid::git+https://github.com/droidian/pulseaudio-modules-droid-modern.git")
 md5sums=('SKIP')
 options=(debug !strip)
 
@@ -32,4 +33,3 @@ package() {
   cd "${srcdir}/${_pkgbase}"
   make DESTDIR="$pkgdir" install
 }
-
