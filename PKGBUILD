@@ -1,4 +1,4 @@
-#Maintainer Erik Inkinen <erik.inkinen@gmail.com>
+# Maintainer Bardia Moshiri <fakeshell@bardia.tech>
 
 pkgname=pulseaudio-modules-droid
 provides=('pulseaduio-modules-droid')
@@ -21,7 +21,7 @@ pkgver() {
 
 build() {
   cd "${srcdir}/${_pkgbase}"
-  echo 15.0 > .tarball-version
+  echo 14.2 > .tarball-version
   ./bootstrap.sh
   ./configure --disable-static \
     --prefix=/usr --mandir=/usr/share/man --libdir=/usr/lib \
